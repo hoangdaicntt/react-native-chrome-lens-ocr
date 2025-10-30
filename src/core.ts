@@ -370,7 +370,7 @@ export default class LensCore {
         const response = await this._fetch(this.#config.endpoint, {
             method: 'POST',
             headers,
-            body: serializedRequestUint8Array,
+            body: serializedRequestUint8Array as unknown as BodyInit,
             redirect: 'follow',
             ...this.#config.fetchOptions
         });

@@ -1,47 +1,57 @@
 {
-  "name": "chrome-lens-ocr",
-  "version": "4.1.1",
-  "description": "Package to use Google Lens OCR for free, via API used in Chrome.",
+  "name": "react-native-chrome-lens-ocr",
+  "version": "1.0.0",
+  "description": "React Native wrapper around the Chrome Lens OCR protobuf API.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "./dist/*",
-    "./src/utils/**/*"
+    "dist",
+    "README.md"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "node ./scripts/build.mjs",
+    "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dimdenGD/chrome-lens-ocr.git"
+    "url": "git+https://github.com/hoangdaicntt/react-native-chrome-lens-ocr.git"
   },
   "keywords": [
     "google",
     "lens",
-    "lens",
     "chrome",
-    "lens",
+    "react-native",
     "reverse",
     "engineering",
     "free",
     "ocr"
   ],
-  "author": "dimden.dev",
+  "author": "hoangdaicntt",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dimdenGD/chrome-lens-ocr/issues"
+    "url": "https://github.com/hoangdaicntt/react-native-chrome-lens-ocr/issues"
   },
-  "homepage": "https://github.com/dimdenGD/chrome-lens-ocr#readme",
+  "homepage": "https://github.com/hoangdaicntt/react-native-chrome-lens-ocr#readme",
   "dependencies": {
     "google-protobuf": "^3.21.4",
-    "image-dimensions": "^2.3.0",
-    "set-cookie-parser": "^2.6.0"
+    "image-dimensions": "^2.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.7.4",
-    "tsup": "^7.2.0",
-    "typescript": "^5.6.2"
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.2",
+    "set-cookie-parser": "^2.6.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./core": {
+      "types": "./dist/core.d.ts",
+      "default": "./dist/core.js"
+    }
   }
 }

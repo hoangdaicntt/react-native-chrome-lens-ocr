@@ -1,0 +1,11 @@
+# Prevent source and tooling files from ending up in the published package
+src/
+scripts/
+test.ts
+tsconfig.json
+tsconfig.build.json
+tsconfig.*.json
+*.log
+.DS_Store
+yarn.lock
+node_modules/
