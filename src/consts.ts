@@ -12,7 +12,7 @@ export const SUPPORTED_MIMES = [
     'image/tiff',
     'image/webp',
     'image/heic'
-];
+] as const;
 
 export const MIME_TO_EXT = {
     'image/x-icon': 'ico',
@@ -23,7 +23,7 @@ export const MIME_TO_EXT = {
     'image/webp': 'webp',
     'image/heic': 'heic',
     'image/gif': 'gif'
-};
+} as const;
 
 export const EXT_TO_MIME = {
     'ico': 'image/x-icon',
@@ -34,4 +34,4 @@ export const EXT_TO_MIME = {
     'webp': 'image/webp',
     'heic': 'image/heic',
     'gif': 'image/gif'
-};
+} as const;

@@ -116,7 +116,7 @@ Instance of this class is thrown when an error happens during the process. It co
 ```
 
 ## Using proxy
-By default, this library uses undici's fetch to make requests. You can use undici dispatcher to proxy requests. Here's an example:
+By default, this library relies on the global `fetch` implementation (for example, the one bundled with Node.js 18+). If you want to add a proxy by using `undici`, install it separately and pass the dispatcher through `fetchOptions`:
 ```javascript
 import Lens from 'chrome-lens-ocr';
 import { ProxyAgent } from 'undici';
@@ -127,7 +127,7 @@ const lens = new Lens({
   }
 });
 ```
-If you use core class with different fetch function, you can pass different options instead of `dispatcher` in `fetchOptions` (for example `agent` for node-fetch).
+If you use core class with a different fetch function, you can pass whatever options that implementation expects instead of `dispatcher` in `fetchOptions` (for example `agent` for node-fetch).
 
 ## Using your cookies
 You can use your own cookies to be authorized in Google. This is optional. Here's an example:
@@ -152,24 +152,4 @@ const lens = new Lens({
         }
     }
 });
-```
-
-## Custom Sharex OCR
-It's possible to use this package with Sharex to OCR images using Google Lens API, instead of bad default OCR in Sharex. Please refer to [SHAREX.md](https://github.com/dimdenGD/chrome-lens-ocr/blob/main/SHAREX.md) for instructions.
-
-## CLI Usage
-You may install this package globally by adding -g on install:
-```bash
-npm install -g chrome-lens-ocr
-```
-Doing this will allow you to use the OCR from a terminal.
-```
-Usage: chrome-lens-ocr [-d] ./path/to/image.png
-       -d   Do not copy text to clipboard
-```
-Example:
-```bash
-chrome-lens-ocr ./shrimple.png
-chrome-lens-ocr -d ./shrimple.png
-chrome-lens-ocr -d https://lune.dimden.dev/7949f833fa42.png
 ```

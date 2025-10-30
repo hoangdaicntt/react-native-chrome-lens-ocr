@@ -1,5 +1,7 @@
 node_modules
+dist
 test.js
 cookies.json
 afData.json
 bun.lock
+.idea
