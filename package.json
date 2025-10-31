@@ -1,6 +1,6 @@
 {
   "name": "react-native-chrome-lens-ocr",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "React Native wrapper around the Chrome Lens OCR protobuf API.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -41,8 +41,7 @@
   "devDependencies": {
     "@types/node": "^22.7.4",
     "esbuild": "^0.24.0",
-    "typescript": "^5.6.2",
-    "set-cookie-parser": "^2.6.0"
+    "typescript": "^5.6.2"
   },
   "exports": {
     ".": {

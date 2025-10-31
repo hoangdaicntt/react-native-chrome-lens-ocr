@@ -5,3 +5,4 @@ cookies.json
 afData.json
 bun.lock
 .idea
+tmp-npm-cache
